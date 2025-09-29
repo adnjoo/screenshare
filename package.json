@@ -1,0 +1,49 @@
+{
+  "name": "screenshare-app",
+  "version": "1.0.0",
+  "description": "Open source screenshare app for Mac similar to Screen Studio",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "dist": "electron-builder --publish=never"
+  },
+  "keywords": ["screenshare", "screen-recording", "mac", "electron"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "build": {
+    "appId": "com.screenshare.app",
+    "productName": "ScreenShare",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.video",
+      "target": "dmg",
+      "icon": "assets/icon.icns",
+      "extendInfo": {
+        "NSCameraUsageDescription": "This app needs access to the camera for screen recording functionality.",
+        "NSMicrophoneUsageDescription": "This app needs access to the microphone for audio recording during screen capture.",
+        "NSScreenCaptureUsageDescription": "This app needs access to screen recording to capture your screen content.",
+        "NSDesktopFolderUsageDescription": "This app needs access to the Desktop folder to save recordings.",
+        "NSDocumentsFolderUsageDescription": "This app needs access to the Documents folder to save recordings.",
+        "NSDownloadsFolderUsageDescription": "This app needs access to the Downloads folder to save recordings."
+      }
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "node_modules/**/*",
+      "Info.plist"
+    ]
+  }
+}

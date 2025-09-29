@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Capture</title>
+</head>
+<body>
+    <div id="status">Initializing screen capture...</div>
+    
+    <script>
+        // This page is used for screen capture functionality
+        // The actual capture logic is injected from the main process
+        
+        document.getElementById('status').textContent = 'Screen capture page loaded';
+        
+        // Make sure we have access to required APIs
+        if (typeof navigator !== 'undefined' && navigator.mediaDevices) {
+            document.getElementById('status').textContent = 'Media devices API available';
+        } else {
+            document.getElementById('status').textContent = 'Media devices API not available';
+        }
+    </script>
+</body>
+</html>

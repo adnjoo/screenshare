@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenShare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <div class="logo-icon">📹</div>
+                <h1>ScreenShare</h1>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="source-selection">
+                <h2>Select Screen to Record</h2>
+                <div class="source-grid" id="sourceGrid">
+                    <!-- Sources will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="recording-controls">
+                <button id="startBtn" class="btn btn-primary">
+                    <span class="btn-icon">▶️</span>
+                    Start Recording
+                </button>
+                <button id="stopBtn" class="btn btn-danger" disabled>
+                    <span class="btn-icon">⏹️</span>
+                    Stop Recording
+                </button>
+                <button id="pauseBtn" class="btn btn-warning" disabled>
+                    <span class="btn-icon">⏸️</span>
+                    Pause
+                </button>
+                <button id="resumeBtn" class="btn btn-success" disabled>
+                    <span class="btn-icon">▶️</span>
+                    Resume
+                </button>
+            </div>
+
+            <div class="recording-status" id="recordingStatus">
+                <div class="status-indicator">
+                    <div class="pulse-dot"></div>
+                    <span>Recording in progress...</span>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>Settings</h3>
+                <div class="setting-item">
+                    <label for="qualitySelect">Quality:</label>
+                    <select id="qualitySelect">
+                        <option value="high">High (1080p)</option>
+                        <option value="medium" selected>Medium (720p)</option>
+                        <option value="low">Low (480p)</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="fpsSelect">Frame Rate:</label>
+                    <select id="fpsSelect">
+                        <option value="30" selected>30 FPS</option>
+                        <option value="60">60 FPS</option>
+                        <option value="24">24 FPS</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="recent-recordings">
+                <h3>Recent Recordings</h3>
+                <div class="recordings-list" id="recordingsList">
+                    <p class="no-recordings">No recordings yet</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
+

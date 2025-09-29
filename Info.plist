@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>NSCameraUsageDescription</key>
+    <string>This app needs access to the camera for screen recording functionality.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This app needs access to the microphone for audio recording during screen capture.</string>
+    <key>NSScreenCaptureUsageDescription</key>
+    <string>This app needs access to screen recording to capture your screen content.</string>
+    <key>NSDesktopFolderUsageDescription</key>
+    <string>This app needs access to the Desktop folder to save recordings.</string>
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>This app needs access to the Documents folder to save recordings.</string>
+    <key>NSDownloadsFolderUsageDescription</key>
+    <string>This app needs access to the Downloads folder to save recordings.</string>
+</dict>
+</plist>
